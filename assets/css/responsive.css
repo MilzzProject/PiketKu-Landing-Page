@@ -1,0 +1,112 @@
+/* ===== PiketKu — lapisan mobile-first & performa =====
+   Gaya dasar = layar HP. Layar lebih besar ditambahkan lewat min-width. */
+
+.ic{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;vertical-align:middle}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+body{overflow-x:clip;-webkit-tap-highlight-color:transparent;text-rendering:optimizeSpeed}
+img,svg{max-width:100%}
+a,button{touch-action:manipulation}
+
+/* Tanpa JS, konten tetap terlihat */
+.no-js .reveal{opacity:1}
+.no-js .word-pop{opacity:1;animation:none}
+
+/* Anchor tidak tertutup navbar fixed */
+[id]{scroll-margin-top:5.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---------- Spasi section (HP -> desktop) ---------- */
+.section{padding-block:4rem}
+.hero{padding-top:6.5rem;padding-bottom:3.5rem}
+@media (min-width:640px){
+  .section{padding-block:6rem}
+  .hero{padding-top:9rem;padding-bottom:6rem}
+}
+@media (min-width:1024px){
+  .section{padding-block:8rem}
+  .hero{padding-top:11rem;padding-bottom:8rem}
+}
+/* Render section di bawah layar ditunda sampai mendekati viewport */
+.section,footer{content-visibility:auto;contain-intrinsic-size:auto 640px}
+
+/* ---------- Navbar ---------- */
+#navbar{padding-block:.75rem;transition:padding .25s ease}
+#navbar.scrolled{padding-block:.5rem}
+#navInner{padding:.25rem .5rem .25rem 1rem}
+#navbar.scrolled #navInner{background:var(--glass-bg);border:1px solid var(--glass-border);box-shadow:var(--shadow-md);padding-block:.5rem}
+@media (min-width:640px){#navbar{padding-block:1.25rem}#navbar.scrolled{padding-block:.75rem}}
+@media (min-width:1024px){#navInner{padding-inline:1.25rem}}
+/* blur hanya di layar besar (mahal di HP kelas bawah); HP pakai latar solid */
+@media (max-width:1023px){#navbar.scrolled #navInner{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media (min-width:1024px){#navbar.scrolled #navInner{backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%)}}
+.btn-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px}
+#themeIconMobile{display:block}
+#mobileMenu{max-height:calc(100dvh - 5.5rem);overflow-y:auto;background:var(--surface);border:1px solid var(--line);}
+#mobileMenu a{min-height:44px;display:flex;align-items:center}
+#mobileMenu .flex a{justify-content:center}
+.mobile-menu.open{display:flex}
+
+/* ---------- Hero ---------- */
+.hero-grid{gap:2.5rem}
+@media (min-width:1024px){.hero-grid{gap:4rem}}
+.hero-title{font-size:clamp(2rem,9vw,2.6rem);line-height:1.1}
+@media (min-width:640px){.hero-title{font-size:3.2rem}}
+@media (min-width:1024px){.hero-title{font-size:3.4rem;line-height:1.08}}
+.hero-cta{display:flex;flex-direction:column;gap:.75rem}
+.hero-cta a{justify-content:center;min-height:48px}
+@media (min-width:480px){.hero-cta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:1rem}.hero-cta a{justify-content:flex-start}}
+.hero p.ts-17{font-size:16px}
+@media (min-width:640px){.hero p.ts-17{font-size:17px}}
+
+/* Blob dekoratif: ringan di HP (tanpa blur & tanpa animasi) */
+.blob{filter:none}
+@media (max-width:767px){
+  .blob1,.blob2,.blob3{animation:none}
+  .blob1{width:18rem!important;height:18rem!important}
+  .blob2{width:16rem!important;height:16rem!important}
+  .blob3{display:none}
+}
+@media (min-width:768px){.blob{filter:blur(48px)}}
+
+/* Animasi: di HP cukup fade+geser (tanpa blur filter / float / shimmer) */
+@media (max-width:767px){
+  @keyframes revealUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes wordPop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .reveal{will-change:auto}
+  .mockup-float,.shimmer-sweep::after,.cta-glow{animation:none}
+  .showcase-view.active{animation:none}
+}
+.reveal{animation-duration:.6s}
+
+/* ---------- Mockup hero/showcase ---------- */
+.hero-tilt{max-width:30rem;margin-inline:auto;width:100%}
+#showcaseUrl{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+/* Tab showcase: satu baris geser samping di HP */
+.showcase-tabs{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  margin-inline:-1.25rem;padding-inline:1.25rem;scroll-snap-type:x proximity}
+.showcase-tabs::-webkit-scrollbar{display:none}
+.showcase-tab{flex:none;min-height:44px;white-space:nowrap;scroll-snap-align:center}
+@media (min-width:640px){.showcase-tabs{flex-wrap:wrap;justify-content:center;overflow:visible;margin-inline:0;padding-inline:0}}
+
+/* ---------- Komponen ---------- */
+.faq-answer.open{max-height:24rem}
+[data-faq]{min-height:56px}
+.reveal .p-7{padding:1.5rem}
+@media (min-width:640px){.reveal .p-7{padding:1.75rem}}
+footer{padding-bottom:env(safe-area-inset-bottom)}
+footer .flex.gap-12{gap:2.5rem;flex-wrap:wrap}
+footer a[aria-label]{width:44px;height:44px}
+footer ul a{display:inline-block;padding-block:.25rem}
+a[href^="https://wa.me"]{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.focus-ring:focus-visible,[data-faq]:focus-visible,.showcase-tab:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:10px}
+
+/* Hover hanya untuk perangkat yang punya hover (hindari "lengket" di layar sentuh) */
+@media (hover:none){
+  .hover\:-translate-y-1\.5:hover,.hover\:-translate-y-0\.5:hover{transform:none}
+}
+.hero-grid>*,.grid>*{min-width:0}
+
+/* Perbaikan: "Ribet" tidak muncul karena animasi gradShift menimpa wordPop. Gabungkan keduanya. */
+.word-pop.text-gradient-anim{animation:wordPop .65s cubic-bezier(.2,.7,.2,1.1) both,gradShift 3.5s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.word-pop.text-gradient-anim{animation:none;opacity:1}}

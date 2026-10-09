@@ -1,0 +1,21 @@
+/* Intro pembukaan pertama. Sengaja inline di index.html (sama seperti pk-toast-v3)
+   supaya tidak tergantung cache styles.min.css. Tema mengikuti sistem perangkat. */
+:root{--pk-logo:url(demo-assets/icon-512.png);--pk-ease:cubic-bezier(.22,1,.36,1);--pk-ibg:radial-gradient(120% 90% at 50% 35%,#fff 0%,#eaf3fd 60%,#dbe9f8 100%);--pk-ihalo:rgba(110,175,245,.28);--pk-ititle:#1d3a5c;--pk-isub:#6f8cab;--pk-ishadow:rgba(60,130,210,.28);--pk-ishine:rgba(255,255,255,.85);--pk-itrack:rgba(47,123,224,.15);--pk-ifill:#4a94ec}
+@media (prefers-color-scheme:dark){:root{--pk-ibg:radial-gradient(120% 90% at 50% 35%,#13294a 0%,#0a1a33 60%,#060f1f 100%);--pk-ihalo:rgba(90,160,240,.30);--pk-ititle:#eef5ff;--pk-isub:#8fb1d6;--pk-ishadow:rgba(40,110,200,.45);--pk-ishine:rgba(255,255,255,.55);--pk-itrack:rgba(140,190,255,.18);--pk-ifill:#7cb6ff}}
+html.intro-seen #pkIntro{display:none!important}
+#pkIntro{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--pk-ibg);transition:opacity .7s var(--pk-ease),visibility .7s}
+#pkIntro.hide{opacity:0;visibility:hidden;pointer-events:none}
+#pkIntro.hide .pk-ilogo{transform:scale(1.06);transition:transform .7s var(--pk-ease)}
+.pk-ihalo{position:absolute;width:340px;height:340px;max-width:85vw;border-radius:50%;background:radial-gradient(circle,var(--pk-ihalo),transparent 68%);opacity:0;transform:scale(.8);animation:pkIHalo 1.6s .1s var(--pk-ease) forwards}
+.pk-ilogo{position:relative;width:128px;height:128px;background:var(--pk-logo) center/contain no-repeat;filter:blur(10px) drop-shadow(0 10px 18px var(--pk-ishadow));opacity:0;transform:scale(.92);animation:pkILogo 1.1s .15s var(--pk-ease) forwards}
+.pk-ilogo::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,var(--pk-ishine) 50%,transparent 65%);background-size:260% 100%;background-position:130% 0;background-repeat:no-repeat;-webkit-mask:var(--pk-logo) center/contain no-repeat;mask:var(--pk-logo) center/contain no-repeat;animation:pkIShine 1.2s .9s ease-in-out forwards}
+.pk-ititle{margin:26px 0 0;font-size:26px;font-weight:600;letter-spacing:.02em;color:var(--pk-ititle);opacity:0;transform:translateY(8px);animation:pkIText .9s .85s var(--pk-ease) forwards}
+.pk-isub{margin:6px 0 0;font-size:13.5px;color:var(--pk-isub);opacity:0;transform:translateY(8px);animation:pkIText .9s 1.05s var(--pk-ease) forwards}
+.pk-ibar{position:absolute;bottom:max(44px,env(safe-area-inset-bottom));width:44px;height:3px;border-radius:3px;overflow:hidden;background:var(--pk-itrack);opacity:0;animation:pkIText .6s 1s ease forwards}
+.pk-ibar i{display:block;height:100%;width:100%;border-radius:3px;background:var(--pk-ifill);transform:translateX(-100%);animation:pkILoad 1.5s 1.1s var(--pk-ease) forwards}
+@keyframes pkILogo{to{opacity:1;transform:scale(1);filter:blur(0) drop-shadow(0 10px 18px var(--pk-ishadow))}}
+@keyframes pkIHalo{to{opacity:1;transform:scale(1)}}
+@keyframes pkIShine{to{background-position:-30% 0}}
+@keyframes pkIText{to{opacity:1;transform:translateY(0)}}
+@keyframes pkILoad{to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){#pkIntro *{animation-duration:.01ms!important;animation-delay:0s!important}}

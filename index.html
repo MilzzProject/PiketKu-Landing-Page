@@ -1,154 +1,34 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PiketKu — Kelola Piket Ketertiban Siswa Tanpa Ribet</title>
 <meta name="description" content="PiketKu membantu petugas OSIS mendata siswa yang terlambat dan berpakaian/atribut tidak lengkap, serta memudahkan guru memantau dan merekap laporan ketertiban siswa secara digital.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080A1F" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PiketKu — Kelola Piket Ketertiban Siswa Tanpa Ribet">
+<meta property="og:description" content="Data siswa telat &amp; atribut tidak lengkap, rekap otomatis, dan laporan digital untuk OSIS dan guru.">
 <link rel="icon" type="image/png" sizes="32x32" href="demo-assets/icon-32.png">
 <link rel="apple-touch-icon" href="demo-assets/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-<style>
-/*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
-@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-duration:initial;--tw-ease:initial;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--color-white:#fff;--spacing:.25rem;--container-sm:24rem;--container-md:28rem;--container-2xl:42rem;--container-3xl:48rem;--container-7xl:80rem;--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-3xl:1.875rem;--text-3xl--line-height:calc(2.25 / 1.875);--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-tight:-.025em;--tracking-wide:.025em;--tracking-wider:.05em;--leading-tight:1.25;--leading-snug:1.375;--leading-relaxed:1.625;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--shadow-sm:0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;--shadow-md:0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;--shadow-lg:0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;--ease-out:cubic-bezier(0, 0, .2, 1);--ease-in-out:cubic-bezier(.4, 0, .2, 1);--blur-2xl:40px;--blur-3xl:64px;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.-inset-6{inset:calc(var(--spacing) * -6)}.inset-0{inset:0}.inset-x-0{inset-inline:0}.-top-20{top:calc(var(--spacing) * -20)}.-top-32{top:calc(var(--spacing) * -32)}.top-0{top:0}.top-0\.5{top:calc(var(--spacing) * .5)}.top-5{top:calc(var(--spacing) * 5)}.top-7{top:calc(var(--spacing) * 7)}.top-40{top:calc(var(--spacing) * 40)}.-right-20{right:calc(var(--spacing) * -20)}.-right-32{right:calc(var(--spacing) * -32)}.right-5{right:calc(var(--spacing) * 5)}.-bottom-24{bottom:calc(var(--spacing) * -24)}.bottom-0{bottom:0}.-left-16{left:calc(var(--spacing) * -16)}.-left-24{left:calc(var(--spacing) * -24)}.left-0\.5{left:calc(var(--spacing) * .5)}.left-1\/3{left:33.3333%}.left-4{left:calc(var(--spacing) * 4)}.-z-10{z-index:calc(10 * -1)}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-inline:auto}.mt-0\.5{margin-top:calc(var(--spacing) * .5)}.mt-1\.5{margin-top:calc(var(--spacing) * 1.5)}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-2\.5{margin-top:calc(var(--spacing) * 2.5)}.mt-3{margin-top:calc(var(--spacing) * 3)}.mt-4{margin-top:calc(var(--spacing) * 4)}.mt-5{margin-top:calc(var(--spacing) * 5)}.mt-6{margin-top:calc(var(--spacing) * 6)}.mt-7{margin-top:calc(var(--spacing) * 7)}.mt-8{margin-top:calc(var(--spacing) * 8)}.mt-9{margin-top:calc(var(--spacing) * 9)}.mt-10{margin-top:calc(var(--spacing) * 10)}.mt-12{margin-top:calc(var(--spacing) * 12)}.mt-16{margin-top:calc(var(--spacing) * 16)}.mb-0\.5{margin-bottom:calc(var(--spacing) * .5)}.mb-2{margin-bottom:calc(var(--spacing) * 2)}.mb-3{margin-bottom:calc(var(--spacing) * 3)}.mb-4{margin-bottom:calc(var(--spacing) * 4)}.mb-5{margin-bottom:calc(var(--spacing) * 5)}.mb-6{margin-bottom:calc(var(--spacing) * 6)}.ml-3{margin-left:calc(var(--spacing) * 3)}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.h-1\.5{height:calc(var(--spacing) * 1.5)}.h-2\.5{height:calc(var(--spacing) * 2.5)}.h-4{height:calc(var(--spacing) * 4)}.h-5{height:calc(var(--spacing) * 5)}.h-6{height:calc(var(--spacing) * 6)}.h-7{height:calc(var(--spacing) * 7)}.h-8{height:calc(var(--spacing) * 8)}.h-9{height:calc(var(--spacing) * 9)}.h-10{height:calc(var(--spacing) * 10)}.h-11{height:calc(var(--spacing) * 11)}.h-12{height:calc(var(--spacing) * 12)}.h-14{height:calc(var(--spacing) * 14)}.h-72{height:calc(var(--spacing) * 72)}.h-148{height:calc(var(--spacing) * 148)}.h-full{height:100%}.h-px{height:1px}.min-h-screen{min-height:100vh}.w-1\.5{width:calc(var(--spacing) * 1.5)}.w-2\.5{width:calc(var(--spacing) * 2.5)}.w-4{width:calc(var(--spacing) * 4)}.w-7{width:calc(var(--spacing) * 7)}.w-8{width:calc(var(--spacing) * 8)}.w-9{width:calc(var(--spacing) * 9)}.w-10{width:calc(var(--spacing) * 10)}.w-11{width:calc(var(--spacing) * 11)}.w-12{width:calc(var(--spacing) * 12)}.w-14{width:calc(var(--spacing) * 14)}.w-72{width:calc(var(--spacing) * 72)}.w-full{width:100%}.max-w-2xl{max-width:var(--container-2xl)}.max-w-3xl{max-width:var(--container-3xl)}.max-w-7xl{max-width:var(--container-7xl)}.max-w-md{max-width:var(--container-md)}.max-w-sm{max-width:var(--container-sm)}.min-w-0{min-width:0}.flex-1{flex:1}.shrink-0{flex-shrink:0}.rotate-180{rotate:180deg}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-baseline{align-items:baseline}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.items-stretch{align-items:stretch}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-1{gap:var(--spacing)}.gap-1\.5{gap:calc(var(--spacing) * 1.5)}.gap-2{gap:calc(var(--spacing) * 2)}.gap-2\.5{gap:calc(var(--spacing) * 2.5)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-5{gap:calc(var(--spacing) * 5)}.gap-8{gap:calc(var(--spacing) * 8)}.gap-10{gap:calc(var(--spacing) * 10)}.gap-12{gap:calc(var(--spacing) * 12)}.gap-16{gap:calc(var(--spacing) * 16)}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-2\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)))}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-3xl{border-radius:var(--radius-3xl)}.rounded-full{border-radius:3.40282e38px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-xl{border-radius:var(--radius-xl)}.rounded-t-md{border-top-left-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}.border{border-style:var(--tw-border-style);border-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.border-transparent{border-color:#0000}.bg-white{background-color:var(--color-white)}.p-3{padding:calc(var(--spacing) * 3)}.p-3\.5{padding:calc(var(--spacing) * 3.5)}.p-4{padding:calc(var(--spacing) * 4)}.p-5{padding:calc(var(--spacing) * 5)}.p-6{padding:calc(var(--spacing) * 6)}.p-7{padding:calc(var(--spacing) * 7)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-2\.5{padding-inline:calc(var(--spacing) * 2.5)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-3\.5{padding-inline:calc(var(--spacing) * 3.5)}.px-4{padding-inline:calc(var(--spacing) * 4)}.px-5{padding-inline:calc(var(--spacing) * 5)}.px-6{padding-inline:calc(var(--spacing) * 6)}.px-7{padding-inline:calc(var(--spacing) * 7)}.px-8{padding-inline:calc(var(--spacing) * 8)}.py-1{padding-block:var(--spacing)}.py-1\.5{padding-block:calc(var(--spacing) * 1.5)}.py-2\.5{padding-block:calc(var(--spacing) * 2.5)}.py-3{padding-block:calc(var(--spacing) * 3)}.py-3\.5{padding-block:calc(var(--spacing) * 3.5)}.py-4{padding-block:calc(var(--spacing) * 4)}.py-5{padding-block:calc(var(--spacing) * 5)}.py-14{padding-block:calc(var(--spacing) * 14)}.py-16{padding-block:calc(var(--spacing) * 16)}.py-24{padding-block:calc(var(--spacing) * 24)}.pt-5{padding-top:calc(var(--spacing) * 5)}.pt-6{padding-top:calc(var(--spacing) * 6)}.pt-36{padding-top:calc(var(--spacing) * 36)}.pr-8{padding-right:calc(var(--spacing) * 8)}.pb-4{padding-bottom:calc(var(--spacing) * 4)}.pb-5{padding-bottom:calc(var(--spacing) * 5)}.pb-24{padding-bottom:calc(var(--spacing) * 24)}.text-center{text-align:center}.text-left{text-align:left}.font-mono{font-family:var(--font-mono)}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.leading-snug{--tw-leading:var(--leading-snug);line-height:var(--leading-snug)}.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-wide{--tw-tracking:var(--tracking-wide);letter-spacing:var(--tracking-wide)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.text-white{color:var(--color-white)}.opacity-20{opacity:.2}.opacity-25{opacity:.25}.opacity-30{opacity:.3}.opacity-35{opacity:.35}.opacity-40{opacity:.4}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.blur-2xl{--tw-blur:blur(var(--blur-2xl));filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.blur-3xl{--tw-blur:blur(var(--blur-3xl));filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-300{--tw-duration:.3s;transition-duration:.3s}.ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}@media (hover:hover){.group-hover\:scale-110:is(:where(.group):hover *){--tw-scale-x:110%;--tw-scale-y:110%;--tw-scale-z:110%;scale:var(--tw-scale-x) var(--tw-scale-y)}}.last\:border-0:last-child{border-style:var(--tw-border-style);border-width:0}@media (hover:hover){.hover\:-translate-y-0\.5:hover{--tw-translate-y:calc(var(--spacing) * -.5);translate:var(--tw-translate-x) var(--tw-translate-y)}.hover\:-translate-y-1\.5:hover{--tw-translate-y:calc(var(--spacing) * -1.5);translate:var(--tw-translate-x) var(--tw-translate-y)}.hover\:border-transparent:hover{border-color:#0000}.hover\:brightness-95:hover{--tw-brightness:brightness(95%);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.hover\:brightness-110:hover{--tw-brightness:brightness(110%);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}}@media (width>=40rem){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:px-5{padding-inline:calc(var(--spacing) * 5)}.sm\:px-8{padding-inline:calc(var(--spacing) * 8)}.sm\:px-16{padding-inline:calc(var(--spacing) * 16)}.sm\:py-20{padding-block:calc(var(--spacing) * 20)}.sm\:py-28{padding-block:calc(var(--spacing) * 28)}.sm\:py-32{padding-block:calc(var(--spacing) * 32)}.sm\:pt-44{padding-top:calc(var(--spacing) * 44)}.sm\:pb-32{padding-bottom:calc(var(--spacing) * 32)}.sm\:text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}}@media (width>=64rem){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}}@font-face{font-family:Sora;src:url(/fonts/sora-latin-600-normal.woff2)format("woff2");font-weight:600}@font-face{font-family:Sora;src:url(/fonts/sora-latin-700-normal.woff2)format("woff2");font-weight:700}@font-face{font-family:Sora;src:url(/fonts/sora-latin-800-normal.woff2)format("woff2");font-weight:800}@font-face{font-family:Inter;src:url(/fonts/inter-latin-400-normal.woff2)format("woff2");font-weight:400}@font-face{font-family:Inter;src:url(/fonts/inter-latin-500-normal.woff2)format("woff2");font-weight:500}@font-face{font-family:Inter;src:url(/fonts/inter-latin-600-normal.woff2)format("woff2");font-weight:600}@font-face{font-family:Inter;src:url(/fonts/inter-latin-700-normal.woff2)format("woff2");font-weight:700}@font-face{font-family:JetBrains Mono;src:url(/fonts/jetbrains-mono-latin-500-normal.woff2)format("woff2");font-weight:500}@font-face{font-family:JetBrains Mono;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2)format("woff2");font-weight:600}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}
-
-</style>
-<style>
-:root{
-  --ink:#0B0F2B; --ink-soft:#5B6478; --ink-faint:#8A92AC;
-  --indigo:#3D2FC4; --indigo-2:#5B3FE0; --blue:#2F6FFF; --violet:#8B5CF6;
-  --surface:#FFFFFF; --surface-tint:#F5F7FF; --surface-raised:#FFFFFF;
-  --line:rgba(11,15,43,0.09); --line-soft:rgba(11,15,43,0.05);
-  --shadow-sm:0 2px 8px rgba(20,24,60,0.06);
-  --shadow-md:0 8px 28px rgba(20,24,60,0.10);
-  --shadow-lg:0 24px 64px rgba(31,38,135,0.16);
-  --glass-bg:rgba(255,255,255,0.66); --glass-border:rgba(255,255,255,0.5);
-}
-[data-theme="dark"]{
-  --ink:#EEF1FF; --ink-soft:#A6ADD0; --ink-faint:#6F7699;
-  --indigo:#7C6CF6; --indigo-2:#9485FF; --blue:#5B8DFF; --violet:#A78BFA;
-  --surface:#080A1F; --surface-tint:#10142F; --surface-raised:#11142E;
-  --line:rgba(255,255,255,0.09); --line-soft:rgba(255,255,255,0.05);
-  --shadow-sm:0 2px 8px rgba(0,0,0,0.3);
-  --shadow-md:0 8px 28px rgba(0,0,0,0.35);
-  --shadow-lg:0 24px 64px rgba(0,0,0,0.5);
-  --glass-bg:rgba(17,20,46,0.6); --glass-border:rgba(255,255,255,0.08);
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{margin:0; background:var(--surface); color:var(--ink); transition:background .35s ease,color .35s ease;}
-.font-display{font-family:'Sora',ui-sans-serif,system-ui,sans-serif;}
-.font-body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;}
-.font-mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
-.text-ink{color:var(--ink);} .text-ink-soft{color:var(--ink-soft);} .text-ink-faint{color:var(--ink-faint);}
-.bg-surface{background:var(--surface);} .bg-surface-tint{background:var(--surface-tint);}
-.bg-surface-raised{background:var(--surface-raised);}
-.border-line{border-color:var(--line);} .border-line-soft{border-color:var(--line-soft);}
-.text-gradient{background:linear-gradient(100deg,var(--indigo),var(--blue) 60%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
-.bg-grad-brand{background:linear-gradient(100deg,var(--indigo),var(--blue));}
-.glass{background:var(--glass-bg); backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%); border:1px solid var(--glass-border);}
-.shadow-token-sm{box-shadow:var(--shadow-sm);} .shadow-token-md{box-shadow:var(--shadow-md);} .shadow-token-lg{box-shadow:var(--shadow-lg);}
-
-@keyframes blobFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,70px) scale(1.15)}}
-@keyframes blobFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-55px,-45px) scale(1.1)}}
-@keyframes blobFloat3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(38px,-60px) scale(1.18)}}
-.blob1{animation:blobFloat1 10s ease-in-out infinite;}
-.blob2{animation:blobFloat2 12s ease-in-out infinite;}
-.blob3{animation:blobFloat3 14s ease-in-out infinite;}
-
-@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.72)}}
-.pulse-dot{animation:pulseDot 1.6s ease infinite;}
-
-@keyframes revealUp{from{opacity:0;transform:translateY(28px) scale(.985);filter:blur(6px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-.reveal{opacity:0; will-change:transform,opacity,filter;}
-.reveal.in-view{animation:revealUp .8s cubic-bezier(.2,.65,.3,1) forwards;}
-
-@keyframes floatMockup{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.mockup-float{animation:floatMockup 5.5s ease-in-out infinite;}
-
-@keyframes wordPop{from{opacity:0;transform:translateY(22px) scale(.92);filter:blur(4px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-.word-pop{display:inline-block; opacity:0; animation:wordPop .65s cubic-bezier(.2,.7,.2,1.1) both;}
-
-.text-gradient-anim{background-size:220% auto; animation:gradShift 3.5s ease-in-out infinite;}
-@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-
-.hero-tilt{transform-style:preserve-3d; transition:transform .15s ease-out;}
-.hero-tilt .r-22{transition:box-shadow .3s ease;}
-
-@keyframes ctaGlow{0%,100%{box-shadow:0 0 0 0 rgba(47,111,255,.55),var(--shadow-md)}50%{box-shadow:0 0 0 14px rgba(47,111,255,0),var(--shadow-md)}}
-.cta-glow{animation:ctaGlow 2.4s ease-out infinite;}
-
-@keyframes shimmerSweep{0%{transform:translateX(-120%) skewX(-15deg)}100%{transform:translateX(220%) skewX(-15deg)}}
-.shimmer-sweep{position:relative; overflow:hidden;}
-.shimmer-sweep::after{content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);animation:shimmerSweep 3.2s ease-in-out infinite; animation-delay:1s;}
-
-@keyframes viewOut{from{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}to{opacity:0;transform:translateY(-12px) scale(.97);filter:blur(5px)}}
-@keyframes viewIn{from{opacity:0;transform:translateY(16px) scale(.97);filter:blur(5px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-.showcase-view.leaving{display:block !important; animation:viewOut .22s cubic-bezier(.4,0,1,1) forwards;}
-.showcase-view.entering{animation:viewIn .5s cubic-bezier(.2,.65,.3,1) both;}
-#showcaseUrl{transition:opacity .18s ease;}
-#showcaseUrl.url-fade{opacity:0;}
-
-@keyframes dotbounce{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-6px);opacity:1}}
-
-@media (prefers-reduced-motion: reduce){
-  .blob1,.blob2,.blob3,.pulse-dot,.mockup-float,.word-pop,.text-gradient-anim,.cta-glow,.shimmer-sweep::after{animation:none !important;}
-  .reveal{opacity:1 !important; animation:none !important; filter:none !important;}
-  .showcase-view.leaving,.showcase-view.entering{animation:none !important;}
-  .word-pop{opacity:1 !important;}
-  .hero-tilt{transform:none !important;}
-}
-
-.focus-ring:focus-visible{outline:2px solid var(--blue); outline-offset:3px; border-radius:10px;}
-
-.ts-11{font-size:11px;} .ts-24r{font-size:2.4rem;} .ts-105{font-size:10.5px;}
-.ts-135{font-size:13.5px;} .ts-10{font-size:10px;} .ts-15{font-size:15px;}
-.ts-13{font-size:13px;} .ts-85{font-size:8.5px;} .ts-155{font-size:15.5px;}
-.ts-145{font-size:14.5px;} .ts-125{font-size:12.5px;} .ts-14{font-size:14px;}
-.ts-26r{font-size:2.6rem;} .ts-16{font-size:16px;} .ts-12{font-size:12px;}
-.ts-95{font-size:9.5px;} .ts-34r{font-size:3.4rem;} .ts-21r{font-size:2.1rem;}
-.ts-17{font-size:17px;} .ts-165{font-size:16.5px;}
-.c-indigosolid{color:#3D2FC4;} .c-bluesolid{color:#2F6FFF;} .c-emerald{color:#2BB592;}
-.bg-bluesolid{background:#2F6FFF;} .bg-violetsoft{background:#ECE6FB;} .bg-logo{background:#0c0d14;}
-.bg-dotred{background:#ff5f57;} .bg-dotyellow{background:#febc2e;} .bg-dotgreen{background:#28c840;}
-.r-22{border-radius:22px;} .r-32{border-radius:32px;} .r-40r{border-radius:2.5rem;}
-.mw-260{max-width:260px;} .mw-34r{max-width:34rem;} .mw-15r{max-width:15rem;}
-.rt-125p{right:12.5%;} .lf-125p{left:12.5%;} .op-08{opacity:0.08;}
-.lh-108{line-height:1.08;} .h-148{height:148px;}
-.c-white70{color:rgba(255,255,255,0.7);} .c-white80{color:rgba(255,255,255,0.8);} .c-white90{color:rgba(255,255,255,0.9);}
-
-/* mobile menu + faq + showcase helpers */
-.mobile-menu{display:none;}
-.mobile-menu.open{display:flex;}
-.faq-answer{overflow:hidden; max-height:0; opacity:0; transition:all .3s ease;}
-.faq-answer.open{max-height:12rem; opacity:1;}
-.faq-chevron{transition:transform .3s ease;}
-.faq-chevron.open{transform:rotate(180deg);}
-.showcase-view{display:none;}
-.showcase-view.active{display:block; animation:revealUp .4s ease both;}
-.showcase-tab{background:transparent; border:1px solid var(--line); color:var(--ink-soft); cursor:pointer;}
-.showcase-tab:hover{color:var(--ink); background:var(--surface-raised);}
-.showcase-tab.active{background:linear-gradient(100deg,var(--indigo),var(--blue)); color:#fff; border-color:transparent; box-shadow:var(--shadow-sm);}
-.toggle-switch{width:36px;height:20px;border-radius:999px;position:relative;transition:background .2s;border:1px solid var(--line); background:var(--surface-tint);}
-.toggle-switch.on{background:linear-gradient(100deg,var(--indigo),var(--blue)); border-color:transparent;}
-.toggle-knob{position:absolute; top:2px; left:2px; width:16px; height:16px; border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.2); transition:left .2s;}
-.toggle-switch.on .toggle-knob{left:18px;}
-button{font-family:inherit;}
-</style>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<script src="assets/js/theme-init.js"></script>
 </head>
-<body class="bg-surface font-body" data-theme="light">
-
-<!-- ============ AMBIENT DECOR (shared keyframes already defined) ============ -->
-
+<body class="bg-surface font-body">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol><symbol id="i-bar-chart-3" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" /> <path d="M18 17V9" /> <path d="M13 17V5" /> <path d="M8 17v-3" /></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /> <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></symbol><symbol id="i-calendar-clock" viewBox="0 0 24 24"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" /> <path d="M16 2v4" /> <path d="M8 2v4" /> <path d="M3 10h5" /> <path d="M17.5 17.5 16 16.3V14" /> <circle cx="16" cy="16" r="6" /></symbol><symbol id="i-calendar-plus" viewBox="0 0 24 24"><path d="M8 2v4" /> <path d="M16 2v4" /> <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8" /> <path d="M3 10h18" /> <path d="M16 19h6" /> <path d="M19 16v6" /></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol><symbol id="i-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="m9 14 2 2 4-4" /></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></symbol><symbol id="i-file-edit" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5" /> <path d="M14 2v4a2 2 0 0 0 2 2h4" /> <path d="M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></symbol><symbol id="i-globe-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /></symbol><symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></symbol><symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z" /></symbol><symbol id="i-layout-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1" /> <rect width="7" height="5" x="14" y="3" rx="1" /> <rect width="7" height="9" x="14" y="12" rx="1" /> <rect width="7" height="5" x="3" y="16" rx="1" /></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol><symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12" /> <line x1="4" x2="20" y1="6" y2="6" /> <line x1="4" x2="20" y1="18" y2="18" /></symbol><symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></symbol><symbol id="i-mouse-pointer-click" viewBox="0 0 24 24"><path d="M14 4.1 12 6" /> <path d="m5.1 8-2.9-.8" /> <path d="m6 12-1.9 2" /> <path d="M7.2 2.2 8 5.1" /> <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /></symbol><symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3" /></symbol><symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></symbol><symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /> <path d="M12 18h.01" /></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /> <path d="M20 3v4" /> <path d="M22 5h-4" /> <path d="M4 17v2" /> <path d="M5 18H3" /></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /> <path d="M12 2v2" /> <path d="M12 20v2" /> <path d="m4.93 4.93 1.41 1.41" /> <path d="m17.66 17.66 1.41 1.41" /> <path d="M2 12h2" /> <path d="M20 12h2" /> <path d="m6.34 17.66-1.41 1.41" /> <path d="m19.07 4.93-1.41 1.41" /></symbol><symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /> <polyline points="16 7 22 7 22 13" /></symbol><symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <line x1="19" x2="19" y1="8" y2="14" /> <line x1="22" x2="16" y1="11" y2="11" /></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></symbol></svg>
 <!-- ============ NAVBAR ============ -->
 <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 py-5">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <nav id="navInner" class="flex items-center justify-between rounded-2xl px-4 sm:px-5 py-1 transition-all duration-300">
       <a href="#top" class="flex items-center gap-2.5 focus-ring">
-        <img src="demo-assets/icon-192.png" alt="Logo PiketKu" class="w-9 h-9 rounded-xl shrink-0" style="object-fit:contain">
+        <img src="assets/img/logo-72.png" alt="Logo PiketKu" width="36" height="36" decoding="async" class="w-9 h-9 rounded-xl shrink-0">
         <span class="font-display font-bold text-lg text-ink">Piket<span class="text-gradient">Ku</span></span>
       </a>
 
@@ -161,56 +41,56 @@ button{font-family:inherit;}
       </div>
 
       <div class="hidden lg:flex items-center gap-3">
-        <button onclick="toggleTheme()" aria-label="Ganti tema gelap/terang" class="w-9 h-9 rounded-full flex items-center justify-center text-ink-soft hover:text-ink border border-line hover:bg-surface-tint transition-colors focus-ring">
-          <i data-lucide="moon" id="themeIconDesktop" style="width:16px;height:16px"></i>
+        <button type="button" data-action="theme" aria-label="Ganti tema gelap/terang" class="w-9 h-9 rounded-full flex items-center justify-center text-ink-soft hover:text-ink border border-line hover:bg-surface-tint transition-colors focus-ring">
+          <svg class="ic" id="themeIconDesktop" width="16" height="16" aria-hidden="true"><use href="#i-moon"/></svg>
         </button>
-        <a href="javascript:void(0)" onclick="openWhatsApp('trial')" class="font-body ts-145 font-semibold text-white px-5 py-2.5 rounded-full bg-grad-brand shadow-token-sm hover:shadow-token-md hover:brightness-110 transition-all focus-ring">Coba Gratis</a>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20mencoba%20PiketKu%20dengan%20Paket%20Uji%20Coba%20Gratis%2014%20Hari." target="_blank" rel="noopener" class="font-body ts-145 font-semibold text-white px-5 py-2.5 rounded-full bg-grad-brand shadow-token-sm hover:shadow-token-md hover:brightness-110 transition-all focus-ring">Coba Gratis</a>
       </div>
 
-      <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 flex items-center justify-center text-ink focus-ring" aria-label="Buka menu">
-        <i data-lucide="menu" id="mobileMenuIcon" style="width:22px;height:22px"></i>
+      <button type="button" data-action="menu" id="menuBtn" class="lg:hidden btn-icon text-ink focus-ring" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ic" id="mobileMenuIcon" width="22" height="22" aria-hidden="true"><use href="#i-menu"/></svg>
       </button>
     </nav>
 
     <div id="mobileMenu" class="mobile-menu lg:hidden mt-2 glass rounded-2xl shadow-token-md p-5 flex-col gap-1">
-      <a href="#fitur" onclick="toggleMobileMenu()" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Fitur</a>
-      <a href="#cara-kerja" onclick="toggleMobileMenu()" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Cara Kerja</a>
-      <a href="#harga" onclick="toggleMobileMenu()" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Harga</a>
-      <a href="#faq" onclick="toggleMobileMenu()" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">FAQ</a>
-      <a href="#kontak" onclick="toggleMobileMenu()" class="font-body text-[15px] font-medium text-ink py-2.5">Kontak</a>
+      <a href="#fitur" data-action="menu" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Fitur</a>
+      <a href="#cara-kerja" data-action="menu" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Cara Kerja</a>
+      <a href="#harga" data-action="menu" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">Harga</a>
+      <a href="#faq" data-action="menu" class="font-body text-[15px] font-medium text-ink py-2.5 border-b border-line-soft">FAQ</a>
+      <a href="#kontak" data-action="menu" class="font-body text-[15px] font-medium text-ink py-2.5">Kontak</a>
       <div class="flex items-center gap-3 mt-3">
-        <button onclick="toggleTheme()" aria-label="Ganti tema" class="w-10 h-10 rounded-full flex items-center justify-center text-ink-soft border border-line">
-          <i data-lucide="moon" id="themeIconMobile" style="width:17px;height:17px"></i>
+        <button type="button" data-action="theme" aria-label="Ganti tema" class="w-10 h-10 rounded-full flex items-center justify-center text-ink-soft border border-line">
+          <svg class="ic" id="themeIconMobile" width="17" height="17" aria-hidden="true"><use href="#i-moon"/></svg>
         </button>
-        <a href="javascript:void(0)" onclick="openWhatsApp('trial'); toggleMobileMenu()" class="flex-1 text-center font-body ts-145 font-semibold text-white px-5 py-2.5 rounded-full bg-grad-brand">Coba Gratis</a>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20mencoba%20PiketKu%20dengan%20Paket%20Uji%20Coba%20Gratis%2014%20Hari." target="_blank" rel="noopener" data-action="menu" class="flex-1 text-center font-body ts-145 font-semibold text-white px-5 py-2.5 rounded-full bg-grad-brand">Coba Gratis</a>
       </div>
     </div>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section id="top" class="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32">
+<section id="top" class="hero relative overflow-hidden">
   <div class="absolute inset-0 z-0 overflow-hidden bg-surface">
-    <div class="absolute -top-32 -left-24 rounded-full blur-3xl opacity-40 blob1" style="width:28rem;height:28rem;background:radial-gradient(circle,var(--indigo),transparent 70%)"></div>
-    <div class="absolute top-40 -right-32 rounded-full blur-3xl opacity-35 blob2" style="width:26rem;height:26rem;background:radial-gradient(circle,var(--blue),transparent 70%)"></div>
-    <div class="absolute bottom-0 left-1/3 rounded-full blur-3xl opacity-25 blob3" style="width:22rem;height:22rem;background:radial-gradient(circle,var(--violet),transparent 70%)"></div>
+    <div class="absolute -top-32 -left-24 rounded-full opacity-40 blob blob1" style="width:28rem;height:28rem;background:radial-gradient(circle,var(--indigo),transparent 70%)"></div>
+    <div class="absolute top-40 -right-32 rounded-full opacity-35 blob blob2" style="width:26rem;height:26rem;background:radial-gradient(circle,var(--blue),transparent 70%)"></div>
+    <div class="absolute bottom-0 left-1/3 rounded-full opacity-25 blob blob3" style="width:22rem;height:22rem;background:radial-gradient(circle,var(--violet),transparent 70%)"></div>
   </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 hero-grid grid lg:grid-cols-2 items-center">
     <div class="reveal">
-      <h1 class="font-display font-bold ts-34r lh-108 tracking-tight text-ink" style="font-size:2.6rem">
+      <h1 class="hero-title font-display font-bold tracking-tight text-ink">
         <span class="word-pop" style="animation-delay:.05s">Kelola</span> <span class="word-pop" style="animation-delay:.12s">Piket</span> <span class="word-pop" style="animation-delay:.19s">Ketertiban</span> <span class="word-pop" style="animation-delay:.26s">Siswa</span><br>
         <span class="word-pop" style="animation-delay:.33s">Tanpa</span> <span class="word-pop text-gradient text-gradient-anim" style="animation-delay:.4s">Ribet</span>
       </h1>
       <p class="font-body ts-17 text-ink-soft mt-6 mw-34r leading-relaxed">
         PiketKu membantu petugas OSIS mendata siswa yang terlambat dan berpakaian/atribut tidak lengkap, sekaligus memudahkan guru memantau dan merekap laporannya secara digital.
       </p>
-      <div class="flex flex-wrap items-center gap-4 mt-9">
-        <a href="javascript:void(0)" onclick="openWhatsApp('trial')" class="cta-glow inline-flex items-center gap-2 font-body font-semibold ts-15 text-white px-6 py-3.5 rounded-full bg-grad-brand shadow-token-md hover:brightness-110 hover:-translate-y-0.5 transition-all focus-ring">
-          Coba Gratis 14 Hari <i data-lucide="arrow-right" style="width:17px;height:17px"></i>
+      <div class="hero-cta mt-8">
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20mencoba%20PiketKu%20dengan%20Paket%20Uji%20Coba%20Gratis%2014%20Hari." target="_blank" rel="noopener" class="cta-glow inline-flex items-center gap-2 font-body font-semibold ts-15 text-white px-6 py-3.5 rounded-full bg-grad-brand shadow-token-md hover:brightness-110 hover:-translate-y-0.5 transition-all focus-ring">
+          Coba Gratis 14 Hari <svg class="ic" width="17" height="17" aria-hidden="true"><use href="#i-arrow-right"/></svg>
         </a>
-        <a href="demo.html" target="_blank" class="inline-flex items-center gap-2 font-body font-semibold ts-15 text-ink px-6 py-3.5 rounded-full border border-line hover:bg-surface-tint transition-all focus-ring">
-          <i data-lucide="play" style="width:15px;height:15px"></i> Lihat Demo
+        <a href="demo.html" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-body font-semibold ts-15 text-ink px-6 py-3.5 rounded-full border border-line hover:bg-surface-tint transition-all focus-ring">
+          <svg class="ic" width="15" height="15" aria-hidden="true"><use href="#i-play"/></svg> Lihat Demo
         </a>
       </div>
       <p class="font-body ts-13 text-ink-faint mt-5">Tanpa kartu kredit &middot; Aktif dalam 5 menit &middot; Batalkan kapan saja</p>
@@ -228,7 +108,7 @@ button{font-family:inherit;}
         <div class="px-5 pt-5 pb-4" style="background:linear-gradient(135deg,#2F6FFF,#3D2FC4)">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <img src="demo-assets/icon-192.png" alt="Logo PiketKu" class="w-7 h-7 rounded-lg shrink-0" style="object-fit:contain">
+              <img src="assets/img/logo-72.png" alt="Logo PiketKu" width="36" height="36" decoding="async" class="w-7 h-7 rounded-lg shrink-0">
               <span class="font-display font-bold ts-15 text-white">PiketKu</span>
             </div>
             <span class="font-mono ts-10 c-white80 tracking-wide">v2.4.0</span>
@@ -241,23 +121,23 @@ button{font-family:inherit;}
           </div>
           <div class="grid grid-cols-3 gap-3">
             <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#FDECD2"><i data-lucide="trending-up" style="width:13px;height:13px;color:#F5A623"></i></span>
+              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#FDECD2"><svg class="ic" width="13" height="13" style="color:#F5A623" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
               <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">TERLAMBAT</div>
               <div class="font-display font-bold text-xl text-ink cnt-hero" data-to="7">0</div>
             </div>
             <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#ECE6FB"><i data-lucide="trending-up" style="width:13px;height:13px;color:#8B6CF2"></i></span>
+              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#ECE6FB"><svg class="ic" width="13" height="13" style="color:#8B6CF2" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
               <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">ATRIBUT</div>
               <div class="font-display font-bold text-xl text-ink cnt-hero" data-to="3">0</div>
             </div>
             <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#D9F2E9"><i data-lucide="trending-up" style="width:13px;height:13px;color:#2BB592"></i></span>
+              <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#D9F2E9"><svg class="ic" width="13" height="13" style="color:#2BB592" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
               <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">TOTAL</div>
               <div class="font-display font-bold text-xl text-ink cnt-hero" data-to="12">0</div>
             </div>
           </div>
           <div class="mt-3 rounded-xl p-3.5 bg-surface-raised border border-line-soft flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-grad-brand flex items-center justify-center shrink-0"><i data-lucide="bell" style="width:14px;height:14px;color:#fff"></i></span>
+            <span class="w-8 h-8 rounded-full bg-grad-brand flex items-center justify-center shrink-0"><svg class="ic" width="14" height="14" style="color:#fff" aria-hidden="true"><use href="#i-bell"/></svg></span>
             <div class="min-w-0">
               <div class="font-body ts-12 font-semibold text-ink truncate">3 siswa terlambat tercatat hari ini</div>
               <div class="font-body ts-105 text-ink-faint">Kelas X TKJ 2 &middot; baru saja</div>
@@ -270,37 +150,37 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ PROBLEM SECTION ============ -->
-<section class="py-24 sm:py-32 bg-surface-tint">
+<section class="section bg-surface-tint">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="reveal mw-34r" style="max-width:42rem">
+    <div class="reveal " style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">TANTANGAN YANG SERING DIHADAPI</span>
       <h2 class="font-display font-bold text-3xl sm:ts-24r text-ink mt-3 leading-tight">Masih Mendata Ketertiban Siswa Secara Manual?</h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
       <div class="reveal h-full" style="animation-delay:0ms">
         <div class="h-full p-6 rounded-2xl bg-surface-raised border border-line hover:-translate-y-1.5 hover:shadow-token-md transition-all duration-300">
-          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><i data-lucide="search" style="width:20px;height:20px;color:#EF4444"></i></span>
+          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><svg class="ic" width="20" height="20" style="color:#EF4444" aria-hidden="true"><use href="#i-search"/></svg></span>
           <h3 class="font-display font-bold ts-165 text-ink leading-snug">Data siswa sulit dicari</h3>
           <p class="font-body ts-14 text-ink-soft mt-2.5 leading-relaxed">Rekap siswa telat dan atribut tidak lengkap tersebar di banyak buku dan file, butuh waktu lama cuma untuk cari satu nama.</p>
         </div>
       </div>
       <div class="reveal h-full" style="animation-delay:90ms">
         <div class="h-full p-6 rounded-2xl bg-surface-raised border border-line hover:-translate-y-1.5 hover:shadow-token-md transition-all duration-300">
-          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><i data-lucide="clock" style="width:20px;height:20px;color:#EF4444"></i></span>
+          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><svg class="ic" width="20" height="20" style="color:#EF4444" aria-hidden="true"><use href="#i-clock"/></svg></span>
           <h3 class="font-display font-bold ts-165 text-ink leading-snug">Rekap memakan waktu</h3>
           <p class="font-body ts-14 text-ink-soft mt-2.5 leading-relaxed">Setiap akhir minggu, guru harus menyalin ulang catatan manual petugas OSIS ke laporan rapi.</p>
         </div>
       </div>
       <div class="reveal h-full" style="animation-delay:180ms">
         <div class="h-full p-6 rounded-2xl bg-surface-raised border border-line hover:-translate-y-1.5 hover:shadow-token-md transition-all duration-300">
-          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><i data-lucide="activity" style="width:20px;height:20px;color:#EF4444"></i></span>
+          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><svg class="ic" width="20" height="20" style="color:#EF4444" aria-hidden="true"><use href="#i-activity"/></svg></span>
           <h3 class="font-display font-bold ts-165 text-ink leading-snug">Monitoring kurang efektif</h3>
           <p class="font-body ts-14 text-ink-soft mt-2.5 leading-relaxed">Tidak ada cara cepat untuk melihat siswa mana yang paling sering telat atau atributnya tidak lengkap tanpa membuka semua catatan.</p>
         </div>
       </div>
       <div class="reveal h-full" style="animation-delay:270ms">
         <div class="h-full p-6 rounded-2xl bg-surface-raised border border-line hover:-translate-y-1.5 hover:shadow-token-md transition-all duration-300">
-          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><i data-lucide="file-edit" style="width:20px;height:20px;color:#EF4444"></i></span>
+          <span class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(239,68,68,0.1)"><svg class="ic" width="20" height="20" style="color:#EF4444" aria-hidden="true"><use href="#i-file-edit"/></svg></span>
           <h3 class="font-display font-bold ts-165 text-ink leading-snug">Laporan dibuat manual</h3>
           <p class="font-body ts-14 text-ink-soft mt-2.5 leading-relaxed">Laporan bulanan disusun ulang dari nol setiap kali dibutuhkan kepala sekolah atau wali kelas.</p>
         </div>
@@ -310,7 +190,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ FEATURES SECTION ============ -->
-<section id="fitur" class="py-24 sm:py-32 bg-surface">
+<section id="fitur" class="section bg-surface">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal" style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">FITUR</span>
@@ -319,42 +199,42 @@ button{font-family:inherit;}
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
       <div class="reveal" style="animation-delay:0ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-users"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Manajemen Data Siswa</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Simpan dan kelola data siswa per kelas dalam satu tempat yang selalu rapi dan mudah dicari.</p>
         </div>
       </div>
       <div class="reveal" style="animation-delay:70ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="calendar-clock" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Jadwal Piket Digital</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Susun jadwal piket petugas OSIS per kelompok dan hari, otomatis terlihat oleh semua petugas terkait.</p>
         </div>
       </div>
       <div class="reveal" style="animation-delay:140ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="bar-chart-3" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-bar-chart-3"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Rekap Otomatis</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Setiap entri siswa telat dan atribut tidak lengkap langsung terhitung ke dalam rekap harian, mingguan, dan bulanan.</p>
         </div>
       </div>
       <div class="reveal" style="animation-delay:210ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="layout-dashboard" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-layout-dashboard"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Dashboard Modern</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Pantau ringkasan pelanggaran siswa dan kehadiran petugas piket OSIS secara real-time dari satu layar.</p>
         </div>
       </div>
       <div class="reveal" style="animation-delay:280ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="smartphone" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-smartphone"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Multi Device</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Akses penuh dari laptop, tablet, atau HP — tampilan menyesuaikan otomatis.</p>
         </div>
       </div>
       <div class="reveal" style="animation-delay:350ms">
         <div class="h-full p-7 rounded-2xl border border-line hover:border-transparent hover:shadow-token-md transition-all duration-300 group">
-          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><i data-lucide="shield-check" style="width:21px;height:21px;color:#fff"></i></span>
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-brand group-hover:scale-110 transition-transform duration-300"><svg class="ic" width="21" height="21" style="color:#fff" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
           <h3 class="font-display font-bold text-lg text-ink">Keamanan Data</h3>
           <p class="font-body ts-145 text-ink-soft mt-2.5 leading-relaxed">Setiap akun punya peran dan izin sendiri, data sekolah tersimpan aman di cloud.</p>
         </div>
@@ -364,19 +244,19 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ SHOWCASE SECTION ============ -->
-<section id="showcase" class="py-24 sm:py-32 bg-surface-tint overflow-hidden">
+<section id="showcase" class="section bg-surface-tint overflow-hidden">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal mx-auto text-center" style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">DEMO PRODUK</span>
       <h2 class="font-display font-bold text-3xl sm:ts-24r text-ink mt-3 leading-tight">Lihat PiketKu Secara Langsung</h2>
     </div>
 
-    <div class="reveal flex flex-wrap justify-center gap-2 mt-10" style="animation-delay:120ms">
-      <button onclick="showTab('dashboard')" id="tabbtn-dashboard" class="showcase-tab active font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Dashboard</button>
-      <button onclick="showTab('siswa')" id="tabbtn-siswa" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Data Siswa</button>
-      <button onclick="showTab('jadwal')" id="tabbtn-jadwal" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Jadwal Piket</button>
-      <button onclick="showTab('laporan')" id="tabbtn-laporan" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Laporan</button>
-      <button onclick="showTab('setting')" id="tabbtn-setting" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Pengaturan</button>
+    <div class="reveal showcase-tabs mt-8" role="tablist" aria-label="Tampilan produk" style="animation-delay:120ms">
+      <button type="button" role="tab" data-tab="dashboard" id="tabbtn-dashboard" class="showcase-tab active font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Dashboard</button>
+      <button type="button" role="tab" data-tab="siswa" id="tabbtn-siswa" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Data Siswa</button>
+      <button type="button" role="tab" data-tab="jadwal" id="tabbtn-jadwal" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Jadwal Piket</button>
+      <button type="button" role="tab" data-tab="laporan" id="tabbtn-laporan" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Laporan</button>
+      <button type="button" role="tab" data-tab="setting" id="tabbtn-setting" class="showcase-tab font-body ts-135 font-semibold px-4 py-2.5 rounded-full transition-all focus-ring">Pengaturan</button>
     </div>
 
     <div class="reveal mt-10 mx-auto" style="animation-delay:200ms;max-width:48rem">
@@ -390,7 +270,7 @@ button{font-family:inherit;}
         <div class="px-5 pt-5 pb-4" style="background:linear-gradient(135deg,#2F6FFF,#3D2FC4)">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <img src="demo-assets/icon-192.png" alt="Logo PiketKu" class="w-7 h-7 rounded-lg shrink-0" style="object-fit:contain">
+              <img src="assets/img/logo-72.png" alt="Logo PiketKu" width="36" height="36" decoding="async" class="w-7 h-7 rounded-lg shrink-0">
               <span class="font-display font-bold ts-15 text-white">PiketKu</span>
             </div>
             <span class="font-mono ts-10 c-white80 tracking-wide">v2.4.0</span>
@@ -398,7 +278,7 @@ button{font-family:inherit;}
         </div>
 
         <!-- Dashboard view -->
-        <div class="showcase-view active" id="view-dashboard">
+        <div class="showcase-view active" id="view-dashboard" role="tabpanel">
           <div class="p-5 bg-surface-tint h-full">
             <div class="flex items-center gap-2 mb-4">
               <span class="w-1.5 h-1.5 rounded-full bg-bluesolid pulse-dot"></span>
@@ -406,23 +286,23 @@ button{font-family:inherit;}
             </div>
             <div class="grid grid-cols-3 gap-3">
               <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#FDECD2"><i data-lucide="trending-up" style="width:13px;height:13px;color:#F5A623"></i></span>
+                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#FDECD2"><svg class="ic" width="13" height="13" style="color:#F5A623" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
                 <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">TERLAMBAT</div>
                 <div class="font-display font-bold text-xl text-ink">7</div>
               </div>
               <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#ECE6FB"><i data-lucide="trending-up" style="width:13px;height:13px;color:#8B6CF2"></i></span>
+                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#ECE6FB"><svg class="ic" width="13" height="13" style="color:#8B6CF2" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
                 <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">ATRIBUT</div>
                 <div class="font-display font-bold text-xl text-ink">3</div>
               </div>
               <div class="rounded-xl p-3 bg-surface-raised border border-line-soft">
-                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#D9F2E9"><i data-lucide="trending-up" style="width:13px;height:13px;color:#2BB592"></i></span>
+                <span class="w-7 h-7 rounded-lg flex items-center justify-center mb-2" style="background:#D9F2E9"><svg class="ic" width="13" height="13" style="color:#2BB592" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
                 <div class="font-mono ts-85 tracking-wide text-ink-faint mb-0.5">TOTAL</div>
                 <div class="font-display font-bold text-xl text-ink">12</div>
               </div>
             </div>
             <div class="mt-3 rounded-xl p-3.5 bg-surface-raised border border-line-soft flex items-center gap-3">
-              <span class="w-8 h-8 rounded-full bg-grad-brand flex items-center justify-center shrink-0"><i data-lucide="bell" style="width:14px;height:14px;color:#fff"></i></span>
+              <span class="w-8 h-8 rounded-full bg-grad-brand flex items-center justify-center shrink-0"><svg class="ic" width="14" height="14" style="color:#fff" aria-hidden="true"><use href="#i-bell"/></svg></span>
               <div class="min-w-0">
                 <div class="font-body ts-12 font-semibold text-ink truncate">3 siswa terlambat tercatat hari ini</div>
                 <div class="font-body ts-105 text-ink-faint">Kelas X TKJ 2 &middot; baru saja</div>
@@ -432,7 +312,7 @@ button{font-family:inherit;}
         </div>
 
         <!-- Data Siswa view -->
-        <div class="showcase-view" id="view-siswa">
+        <div class="showcase-view" id="view-siswa" role="tabpanel">
           <div class="p-5 bg-surface-tint h-full">
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-bold ts-13 text-ink">Data Siswa</span>
@@ -476,28 +356,28 @@ button{font-family:inherit;}
         </div>
 
         <!-- Jadwal Piket view -->
-        <div class="showcase-view" id="view-jadwal">
+        <div class="showcase-view" id="view-jadwal" role="tabpanel">
           <div class="p-5 bg-surface-tint h-full">
             <span class="font-display font-bold ts-13 text-ink">Jadwal Piket Minggu Ini</span>
             <div class="mt-3" style="display:flex;flex-direction:column;gap:8px">
               <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-surface-raised border border-line-soft">
-                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><i data-lucide="calendar-clock" style="width:14px;height:14px;color:#8B6CF2"></i></span><span class="font-body ts-125 font-semibold text-ink">Senin</span></div>
+                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><svg class="ic" width="14" height="14" style="color:#8B6CF2" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span><span class="font-body ts-125 font-semibold text-ink">Senin</span></div>
                 <span class="font-mono ts-10 text-ink-soft">Kelompok A</span>
               </div>
               <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-surface-raised border border-line-soft">
-                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><i data-lucide="calendar-clock" style="width:14px;height:14px;color:#8B6CF2"></i></span><span class="font-body ts-125 font-semibold text-ink">Selasa</span></div>
+                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><svg class="ic" width="14" height="14" style="color:#8B6CF2" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span><span class="font-body ts-125 font-semibold text-ink">Selasa</span></div>
                 <span class="font-mono ts-10 text-ink-soft">Kelompok B</span>
               </div>
               <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-surface-raised border border-line-soft">
-                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><i data-lucide="calendar-clock" style="width:14px;height:14px;color:#8B6CF2"></i></span><span class="font-body ts-125 font-semibold text-ink">Rabu</span></div>
+                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><svg class="ic" width="14" height="14" style="color:#8B6CF2" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span><span class="font-body ts-125 font-semibold text-ink">Rabu</span></div>
                 <span class="font-mono ts-10 text-ink-soft">Kelompok C</span>
               </div>
               <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-surface-raised border border-line-soft">
-                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><i data-lucide="calendar-clock" style="width:14px;height:14px;color:#8B6CF2"></i></span><span class="font-body ts-125 font-semibold text-ink">Kamis</span></div>
+                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><svg class="ic" width="14" height="14" style="color:#8B6CF2" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span><span class="font-body ts-125 font-semibold text-ink">Kamis</span></div>
                 <span class="font-mono ts-10 text-ink-soft">Kelompok A</span>
               </div>
               <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-surface-raised border border-line-soft">
-                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><i data-lucide="calendar-clock" style="width:14px;height:14px;color:#8B6CF2"></i></span><span class="font-body ts-125 font-semibold text-ink">Jumat</span></div>
+                <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#ECE6FB"><svg class="ic" width="14" height="14" style="color:#8B6CF2" aria-hidden="true"><use href="#i-calendar-clock"/></svg></span><span class="font-body ts-125 font-semibold text-ink">Jumat</span></div>
                 <span class="font-mono ts-10 text-ink-soft">Kelompok D</span>
               </div>
             </div>
@@ -505,7 +385,7 @@ button{font-family:inherit;}
         </div>
 
         <!-- Laporan view -->
-        <div class="showcase-view" id="view-laporan">
+        <div class="showcase-view" id="view-laporan" role="tabpanel">
           <div class="p-5 bg-surface-tint h-full">
             <div class="flex items-center justify-between mb-4">
               <span class="font-display font-bold ts-13 text-ink">Laporan Pelanggaran</span>
@@ -534,7 +414,7 @@ button{font-family:inherit;}
         </div>
 
         <!-- Pengaturan view -->
-        <div class="showcase-view" id="view-setting">
+        <div class="showcase-view" id="view-setting" role="tabpanel">
           <div class="p-5 bg-surface-tint h-full">
             <span class="font-display font-bold ts-13 text-ink">Pengaturan</span>
             <div class="mt-3" style="display:flex;flex-direction:column;gap:10px">
@@ -560,7 +440,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ BENEFITS SECTION ============ -->
-<section class="py-24 sm:py-32 bg-surface">
+<section class="section bg-surface">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal" style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">KEUNGGULAN</span>
@@ -568,27 +448,27 @@ button{font-family:inherit;}
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
       <div class="reveal" style="animation-delay:0ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="mouse-pointer-click" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-mouse-pointer-click"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Mudah Digunakan</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Antarmuka sederhana, siapa pun di sekolah bisa langsung memakainya tanpa pelatihan khusus.</p></div>
       </div></div>
       <div class="reveal" style="animation-delay:70ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="globe-2" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-globe-2"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Tanpa Instalasi</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Cukup buka browser dan masuk. Tidak perlu memasang aplikasi apa pun di perangkat sekolah.</p></div>
       </div></div>
       <div class="reveal" style="animation-delay:140ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="infinity" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-infinity"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Data Tanpa Batas</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Di paket berlangganan, tambahkan siswa dan kelas sebanyak yang dibutuhkan tanpa biaya tambahan tersembunyi.</p></div>
       </div></div>
       <div class="reveal" style="animation-delay:210ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="refresh-cw" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-refresh-cw"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Update Otomatis</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Fitur baru dan perbaikan langsung tersedia, tanpa perlu pembaruan manual dari pengguna.</p></div>
       </div></div>
       <div class="reveal" style="animation-delay:280ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="headphones" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-headphones"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Support Responsif</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Tim kami siap membantu lewat WhatsApp dan email saat ada pertanyaan atau kendala.</p></div>
       </div></div>
       <div class="reveal" style="animation-delay:350ms"><div class="h-full flex items-start gap-4 p-6 rounded-2xl bg-surface-tint border border-line-soft hover:border-line transition-colors duration-300">
-        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><i data-lucide="cloud" style="width:18px;height:18px;color:var(--indigo)"></i></span>
+        <span class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-surface-raised border border-line"><svg class="ic" width="18" height="18" style="color:var(--indigo)" aria-hidden="true"><use href="#i-cloud"/></svg></span>
         <div><h3 class="font-display font-bold ts-155 text-ink">Berbasis Cloud</h3><p class="font-body ts-135 text-ink-soft mt-1.5 leading-relaxed">Data tersimpan aman di cloud dan otomatis ter-backup, bisa diakses kapan saja.</p></div>
       </div></div>
     </div>
@@ -596,7 +476,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section id="cara-kerja" class="py-24 sm:py-32 bg-surface-tint">
+<section id="cara-kerja" class="section bg-surface-tint">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal mx-auto text-center" style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">CARA KERJA</span>
@@ -605,25 +485,25 @@ button{font-family:inherit;}
     <div class="relative mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="hidden lg:block absolute top-7 lf-125p rt-125p border-line" style="height:1px;border-top:1px dashed var(--line)"></div>
       <div class="reveal relative text-center flex flex-col items-center" style="animation-delay:0ms">
-        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><i data-lucide="user-plus" style="width:22px;height:22px;color:var(--blue)"></i></div>
+        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><svg class="ic" width="22" height="22" style="color:var(--blue)" aria-hidden="true"><use href="#i-user-plus"/></svg></div>
         <span class="font-mono ts-11 font-bold text-ink-faint mt-4">LANGKAH 1</span>
         <h3 class="font-display font-bold ts-16 text-ink mt-1.5">Tambahkan Data Siswa</h3>
         <p class="font-body ts-135 text-ink-soft mt-2 leading-relaxed mw-15r">Impor atau input data siswa dan kelas sekali di awal — selesai dalam hitungan menit.</p>
       </div>
       <div class="reveal relative text-center flex flex-col items-center" style="animation-delay:110ms">
-        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><i data-lucide="calendar-plus" style="width:22px;height:22px;color:var(--blue)"></i></div>
+        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><svg class="ic" width="22" height="22" style="color:var(--blue)" aria-hidden="true"><use href="#i-calendar-plus"/></svg></div>
         <span class="font-mono ts-11 font-bold text-ink-faint mt-4">LANGKAH 2</span>
         <h3 class="font-display font-bold ts-16 text-ink mt-1.5">Atur Jadwal Piket</h3>
         <p class="font-body ts-135 text-ink-soft mt-2 leading-relaxed mw-15r">Buat kelompok dan susun jadwal piket petugas OSIS sesuai kebutuhan sekolah.</p>
       </div>
       <div class="reveal relative text-center flex flex-col items-center" style="animation-delay:220ms">
-        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><i data-lucide="zap" style="width:22px;height:22px;color:var(--blue)"></i></div>
+        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><svg class="ic" width="22" height="22" style="color:var(--blue)" aria-hidden="true"><use href="#i-zap"/></svg></div>
         <span class="font-mono ts-11 font-bold text-ink-faint mt-4">LANGKAH 3</span>
         <h3 class="font-display font-bold ts-16 text-ink mt-1.5">Gunakan Sistem</h3>
         <p class="font-body ts-135 text-ink-soft mt-2 leading-relaxed mw-15r">Petugas OSIS mencatat siswa telat dan atribut tidak lengkap langsung dari HP atau laptop, real-time.</p>
       </div>
       <div class="reveal relative text-center flex flex-col items-center" style="animation-delay:330ms">
-        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><i data-lucide="clipboard-check" style="width:22px;height:22px;color:var(--blue)"></i></div>
+        <div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-raised border border-line shadow-token-sm flex items-center justify-center"><svg class="ic" width="22" height="22" style="color:var(--blue)" aria-hidden="true"><use href="#i-clipboard-check"/></svg></div>
         <span class="font-mono ts-11 font-bold text-ink-faint mt-4">LANGKAH 4</span>
         <h3 class="font-display font-bold ts-16 text-ink mt-1.5">Lihat Laporan Otomatis</h3>
         <p class="font-body ts-135 text-ink-soft mt-2 leading-relaxed mw-15r">Rekap dan laporan tersusun otomatis, siap dibagikan ke wali kelas atau kepala sekolah.</p>
@@ -633,7 +513,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ PRICING SECTION ============ -->
-<section id="harga" class="py-24 sm:py-32 bg-surface">
+<section id="harga" class="section bg-surface">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal mx-auto text-center" style="max-width:42rem">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">HARGA</span>
@@ -647,13 +527,13 @@ button{font-family:inherit;}
         <h3 class="font-display font-bold text-xl mt-2 text-ink">Gratis 14 Hari</h3>
         <div class="mt-4 flex items-baseline gap-1.5"><span class="font-display font-bold ts-21r text-ink">Rp0</span></div>
         <ul class="mt-7 space-y-3.5 flex-1">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Fitur standar</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Maksimal 300 siswa</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Kelas tanpa batas</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Tanpa kartu kredit</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Support standar</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Fitur standar</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Maksimal 300 siswa</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Kelas tanpa batas</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Tanpa kartu kredit</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Support standar</span></li>
         </ul>
-        <a href="javascript:void(0)" onclick="openWhatsApp('trial')" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full bg-grad-brand text-white hover:brightness-110 transition-all focus-ring">Mulai Gratis</a>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20mencoba%20PiketKu%20dengan%20Paket%20Uji%20Coba%20Gratis%2014%20Hari." target="_blank" rel="noopener" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full bg-grad-brand text-white hover:brightness-110 transition-all focus-ring">Mulai Gratis</a>
       </div></div>
 
       <div class="reveal h-full" style="animation-delay:90ms"><div class="h-full flex flex-col p-7 rounded-3xl border border-line bg-surface-raised hover:shadow-token-md transition-all duration-300">
@@ -661,29 +541,29 @@ button{font-family:inherit;}
         <h3 class="font-display font-bold text-xl mt-2 text-ink">Untuk sekolah aktif</h3>
         <div class="mt-4 flex items-baseline gap-1.5"><span class="font-display font-bold ts-21r text-ink">Rp30rb</span><span class="font-body text-sm text-ink-faint">/bulan</span></div>
         <ul class="mt-7 space-y-3.5 flex-1">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Semua fitur</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Siswa tanpa batas</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Kelas tanpa batas</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Update otomatis</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:var(--blue);margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed text-ink-soft">Support standar</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Semua fitur</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Siswa tanpa batas</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Kelas tanpa batas</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Update otomatis</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:var(--blue);margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed text-ink-soft">Support standar</span></li>
         </ul>
-        <a href="javascript:void(0)" onclick="openWhatsApp('bulanan')" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full bg-grad-brand text-white hover:brightness-110 transition-all focus-ring">Pilih Bulanan</a>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20berlangganan%20Paket%20Bulanan." target="_blank" rel="noopener" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full bg-grad-brand text-white hover:brightness-110 transition-all focus-ring">Pilih Bulanan</a>
       </div></div>
 
       <div class="reveal h-full" style="animation-delay:180ms"><div class="h-full flex flex-col p-7 rounded-3xl relative overflow-hidden shadow-token-lg" style="background:linear-gradient(165deg,#3D2FC4,#2F6FFF)">
-        <span class="absolute top-5 right-5 inline-flex items-center gap-1 font-mono text-[10px] font-bold tracking-wide px-2.5 py-1 rounded-full" style="color:#3D2FC4;background:#fff"><i data-lucide="sparkles" style="width:11px;height:11px"></i> PALING POPULER</span>
+        <span class="absolute top-5 right-5 inline-flex items-center gap-1 font-mono text-[10px] font-bold tracking-wide px-2.5 py-1 rounded-full" style="color:#3D2FC4;background:#fff"><svg class="ic" width="11" height="11" aria-hidden="true"><use href="#i-sparkles"/></svg> PALING POPULER</span>
         <span class="font-mono ts-11 tracking-wider font-semibold c-white70">TAHUNAN</span>
         <h3 class="font-display font-bold text-xl mt-2 text-white">Paling hemat</h3>
         <div class="mt-4 flex items-baseline gap-1.5"><span class="font-display font-bold ts-21r text-white">Rp200rb</span><span class="font-body text-sm c-white70">/tahun</span></div>
         <ul class="mt-7 space-y-3.5 flex-1">
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Semua fitur</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Siswa tanpa batas</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Kelas tanpa batas</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Update otomatis</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Prioritas support</span></li>
-          <li class="flex items-start gap-2.5"><i data-lucide="check" style="width:16px;height:16px;color:#fff;margin-top:2px;flex-shrink:0"></i><span class="font-body ts-135 leading-relaxed c-white90">Lebih hemat dari bulanan</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Semua fitur</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Siswa tanpa batas</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Kelas tanpa batas</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Update otomatis</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Prioritas support</span></li>
+          <li class="flex items-start gap-2.5"><svg class="ic" width="16" height="16" style="color:#fff;margin-top:2px;flex-shrink:0" aria-hidden="true"><use href="#i-check"/></svg><span class="font-body ts-135 leading-relaxed c-white90">Lebih hemat dari bulanan</span></li>
         </ul>
-        <a href="javascript:void(0)" onclick="openWhatsApp('tahunan')" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full transition-all focus-ring hover:brightness-95" style="background:#fff;color:#3D2FC4">Pilih Tahunan</a>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20berlangganan%20Paket%20Tahunan." target="_blank" rel="noopener" class="mt-8 text-center font-body font-semibold ts-14 py-3 rounded-full transition-all focus-ring hover:brightness-95" style="background:#fff;color:#3D2FC4">Pilih Tahunan</a>
       </div></div>
 
     </div>
@@ -691,7 +571,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ FAQ SECTION ============ -->
-<section id="faq" class="py-24 sm:py-32 bg-surface-tint">
+<section id="faq" class="section bg-surface-tint">
   <div class="max-w-3xl mx-auto px-5 sm:px-8">
     <div class="reveal text-center">
       <span class="font-mono ts-11 tracking-wider font-semibold text-ink-faint">FAQ</span>
@@ -699,51 +579,51 @@ button{font-family:inherit;}
     </div>
     <div class="reveal mt-10 bg-surface-raised rounded-3xl border border-line px-6 sm:px-8" style="animation-delay:120ms">
       <div class="border-b border-line">
-        <button onclick="toggleFaq(0)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="0" aria-expanded="true" aria-controls="faq-ans-0" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Apakah harus install aplikasi?</span>
-          <i data-lucide="chevron-down" class="faq-chevron open" id="faq-chev-0" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron open" id="faq-chev-0" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer open" id="faq-ans-0"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Tidak. PiketKu berjalan langsung di browser, baik di laptop maupun HP. Cukup buka link sekolah dan masuk dengan akun yang sudah dibuat.</p></div>
       </div>
       <div class="border-b border-line">
-        <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="1" aria-expanded="false" aria-controls="faq-ans-1" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Bisa digunakan di HP?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-1" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-1" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-1"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Bisa. Tampilan PiketKu menyesuaikan otomatis ke ukuran layar HP, jadi petugas piket bisa mencatat langsung dari genggaman.</p></div>
       </div>
       <div class="border-b border-line">
-        <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="2" aria-expanded="false" aria-controls="faq-ans-2" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Apakah data aman?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-2" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-2" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-2"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Data disimpan di server cloud dengan enkripsi dan akses berbasis peran, sehingga hanya pihak yang berwenang yang bisa melihat data tertentu.</p></div>
       </div>
       <div class="border-b border-line">
-        <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="3" aria-expanded="false" aria-controls="faq-ans-3" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Ada batas siswa?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-3" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-3" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-3"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Paket uji coba gratis dibatasi maksimal 300 siswa. Paket Bulanan dan Tahunan tanpa batas jumlah siswa, jadi tambahkan sebanyak yang dibutuhkan sekolahmu.</p></div>
       </div>
       <div class="border-b border-line">
-        <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="4" aria-expanded="false" aria-controls="faq-ans-4" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Bisa digunakan lebih dari satu kelas?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-4" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-4" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-4"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Bisa. PiketKu dirancang untuk mengelola banyak kelas dan kelompok piket sekaligus dalam satu dashboard yang sama.</p></div>
       </div>
       <div class="border-b border-line">
-        <button onclick="toggleFaq(5)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="5" aria-expanded="false" aria-controls="faq-ans-5" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Apakah tersedia demo?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-5" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-5" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-5"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">Tersedia. Klik tombol "Lihat Demo" di bagian atas halaman ini untuk melihat tampilan PiketKu secara langsung sebelum mendaftar.</p></div>
       </div>
       <div>
-        <button onclick="toggleFaq(6)" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
+        <button type="button" data-faq="6" aria-expanded="false" aria-controls="faq-ans-6" class="w-full flex items-center justify-between gap-4 py-5 text-left focus-ring">
           <span class="font-display font-semibold ts-155 text-ink">Apa maksud "Piket" di PiketKu?</span>
-          <i data-lucide="chevron-down" class="faq-chevron" id="faq-chev-6" style="width:18px;height:18px;color:var(--ink-faint);flex-shrink:0"></i>
+          <svg class="ic faq-chevron" id="faq-chev-6" width="18" height="18" style="color:var(--ink-faint);flex-shrink:0" aria-hidden="true"><use href="#i-chevron-down"/></svg>
         </button>
         <div class="faq-answer" id="faq-ans-6"><p class="font-body ts-14 text-ink-soft leading-relaxed pb-5 pr-8">PiketKu bukan untuk piket kebersihan kelas. "Piket" di sini adalah piket ketertiban yang dijalankan petugas OSIS — mencatat siswa yang terlambat atau berpakaian/atribut tidak lengkap saat masuk gerbang. Data itu lalu otomatis terekap supaya guru dan pihak sekolah bisa memantau serta membuat laporan dengan mudah.</p></div>
       </div>
@@ -752,7 +632,7 @@ button{font-family:inherit;}
 </section>
 
 <!-- ============ FINAL CTA ============ -->
-<section class="py-24 sm:py-28">
+<section class="section">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="reveal">
       <div class="relative overflow-hidden r-40r px-8 sm:px-16 py-16 sm:py-20 text-center" style="background:linear-gradient(155deg,#3D2FC4,#2F6FFF)">
@@ -760,8 +640,8 @@ button{font-family:inherit;}
         <div class="absolute -bottom-24 -left-16 w-72 h-72 rounded-full opacity-20 blur-3xl" style="background:#fff"></div>
         <h2 class="relative font-display font-bold text-3xl sm:ts-26r text-white leading-tight max-w-2xl mx-auto">Mulai Digitalisasi Pendataan Ketertiban Siswa Sekarang</h2>
         <p class="relative font-body ts-16 c-white80 mt-4 max-w-md mx-auto">Coba gratis selama 14 hari tanpa kartu kredit.</p>
-        <a href="javascript:void(0)" onclick="openWhatsApp('trial')" class="relative inline-flex items-center gap-2 mt-9 font-body font-semibold ts-155 px-7 py-4 rounded-full shadow-token-lg hover:-translate-y-0.5 hover:brightness-95 transition-all focus-ring" style="color:#3D2FC4;background:#fff">
-          Coba Gratis Sekarang <i data-lucide="arrow-right" style="width:18px;height:18px"></i>
+        <a href="https://wa.me/6289654965918?text=Halo%20Admin%20PiketKu%2C%20saya%20ingin%20mencoba%20PiketKu%20dengan%20Paket%20Uji%20Coba%20Gratis%2014%20Hari." target="_blank" rel="noopener" class="relative inline-flex items-center gap-2 mt-9 font-body font-semibold ts-155 px-7 py-4 rounded-full shadow-token-lg hover:-translate-y-0.5 hover:brightness-95 transition-all focus-ring" style="color:#3D2FC4;background:#fff">
+          Coba Gratis Sekarang <svg class="ic" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
         </a>
       </div>
     </div>
@@ -774,7 +654,7 @@ button{font-family:inherit;}
     <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-10">
       <div class="mw-15r" style="max-width:24rem">
         <div class="flex items-center gap-2.5">
-          <img src="demo-assets/icon-192.png" alt="Logo PiketKu" class="w-8 h-8 rounded-lg shrink-0" style="object-fit:contain">
+          <img src="assets/img/logo-72.png" alt="Logo PiketKu" width="36" height="36" decoding="async" class="w-8 h-8 rounded-lg shrink-0">
           <span class="font-display font-bold text-base text-ink">Piket<span class="text-gradient">Ku</span></span>
         </div>
         <p class="font-body ts-135 text-ink-soft mt-4 leading-relaxed">Sistem pendataan ketertiban siswa berbasis web — membantu petugas OSIS mendata siswa telat &amp; atribut tidak lengkap, serta memudahkan guru memantau dan merekap laporan dalam satu platform.</p>
@@ -792,8 +672,8 @@ button{font-family:inherit;}
         <div>
           <h4 class="font-mono ts-11 tracking-wider font-semibold text-ink-faint mb-4">TERHUBUNG</h4>
           <div class="flex gap-3">
-            <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full border border-line flex items-center justify-center text-ink-soft hover:text-ink hover:bg-surface-raised transition-colors"><i data-lucide="message-circle" style="width:16px;height:16px"></i></a>
-            <a href="#" aria-label="Email" class="w-9 h-9 rounded-full border border-line flex items-center justify-center text-ink-soft hover:text-ink hover:bg-surface-raised transition-colors"><i data-lucide="mail" style="width:16px;height:16px"></i></a>
+            <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full border border-line flex items-center justify-center text-ink-soft hover:text-ink hover:bg-surface-raised transition-colors"><svg class="ic" width="16" height="16" aria-hidden="true"><use href="#i-message-circle"/></svg></a>
+            <a href="#" aria-label="Email" class="w-9 h-9 rounded-full border border-line flex items-center justify-center text-ink-soft hover:text-ink hover:bg-surface-raised transition-colors"><svg class="ic" width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg></a>
             <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-line flex items-center justify-center text-ink-soft hover:text-ink hover:bg-surface-raised transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
             </a>
@@ -811,173 +691,8 @@ button{font-family:inherit;}
   </div>
 </footer>
 
-<script>
-// ---------- WHATSAPP CTA ----------
-function openWhatsApp(packageName) {
-  const phoneNumber = '6289654965918';
-  const messages = {
-    trial: 'Halo Admin PiketKu, saya ingin mencoba PiketKu dengan Paket Uji Coba Gratis 14 Hari.',
-    bulanan: 'Halo Admin PiketKu, saya ingin berlangganan Paket Bulanan.',
-    tahunan: 'Halo Admin PiketKu, saya ingin berlangganan Paket Tahunan.'
-  };
-  const message = messages[packageName] || messages.trial;
-  const url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
-  window.open(url, '_blank');
-}
-
-// ---------- THEME TOGGLE ----------
-function toggleTheme(){
-  const body = document.body;
-  const isDark = body.getAttribute('data-theme') === 'dark';
-  body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  const iconName = isDark ? 'moon' : 'sun';
-  document.getElementById('themeIconDesktop').setAttribute('data-lucide', iconName);
-  document.getElementById('themeIconMobile').setAttribute('data-lucide', iconName);
-  lucide.createIcons();
-}
-
-// ---------- MOBILE MENU ----------
-function toggleMobileMenu(){
-  const menu = document.getElementById('mobileMenu');
-  const open = menu.classList.toggle('open');
-  menu.style.display = open ? 'flex' : 'none';
-  document.getElementById('mobileMenuIcon').setAttribute('data-lucide', open ? 'x' : 'menu');
-  lucide.createIcons();
-}
-
-// ---------- NAVBAR SCROLL BLUR ----------
-const navbar = document.getElementById('navbar');
-const navInner = document.getElementById('navInner');
-function onScrollNav(){
-  const scrolled = window.scrollY > 12;
-  navbar.classList.toggle('py-3', scrolled);
-  navbar.classList.toggle('py-5', !scrolled);
-  navInner.classList.toggle('glass', scrolled);
-  navInner.classList.toggle('shadow-token-md', scrolled);
-  navInner.classList.toggle('py-2.5', scrolled);
-  navInner.classList.toggle('py-1', !scrolled);
-}
-window.addEventListener('scroll', onScrollNav, { passive: true });
-onScrollNav();
-
-// ---------- SCROLL REVEAL ----------
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.18 });
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-
-// ---------- HERO TILT (mouse-follow 3D) ----------
-(function initHeroTilt(){
-  const card = document.getElementById('heroTiltCard');
-  if (!card) return;
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isTouch = window.matchMedia('(pointer: coarse)').matches;
-  if (prefersReduced || isTouch) return;
-
-  let rafId = null;
-  function handleMove(e){
-    const rect = card.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width;
-    const py = (e.clientY - rect.top) / rect.height;
-    const rotateY = (px - 0.5) * 14;
-    const rotateX = (0.5 - py) * 14;
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = requestAnimationFrame(() => {
-      card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-    });
-  }
-  function resetTilt(){
-    if (rafId) cancelAnimationFrame(rafId);
-    card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) scale(1)';
-  }
-  card.addEventListener('mousemove', handleMove);
-  card.addEventListener('mouseleave', resetTilt);
-})();
-
-// ---------- HERO COUNT-UP ----------
-function runCountUp(){
-  document.querySelectorAll('.cnt-hero').forEach((el) => {
-    const to = parseInt(el.dataset.to, 10);
-    const dur = 1200;
-    const start = performance.now();
-    function step(t){
-      const p = Math.min(1, (t - start) / dur);
-      el.textContent = Math.round(p * to);
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  });
-}
-runCountUp();
-
-// ---------- SHOWCASE TABS ----------
-const showcaseTabs = ['dashboard', 'siswa', 'jadwal', 'laporan', 'setting'];
-let currentShowcaseTab = 'dashboard';
-let showcaseAnimating = false;
-function showTab(key){
-  if (showcaseAnimating || key === currentShowcaseTab) return;
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const oldEl = document.getElementById('view-' + currentShowcaseTab);
-  const newEl = document.getElementById('view-' + key);
-  const urlEl = document.getElementById('showcaseUrl');
-
-  showcaseTabs.forEach((k) => {
-    document.getElementById('tabbtn-' + k).classList.toggle('active', k === key);
-  });
-
-  if (prefersReduced) {
-    oldEl.classList.remove('active');
-    newEl.classList.add('active');
-    urlEl.textContent = 'app.piketku.id/' + key;
-    currentShowcaseTab = key;
-    return;
-  }
-
-  showcaseAnimating = true;
-  urlEl.classList.add('url-fade');
-  oldEl.classList.remove('active');
-  oldEl.classList.add('leaving');
-
-  setTimeout(() => {
-    oldEl.classList.remove('leaving');
-    urlEl.textContent = 'app.piketku.id/' + key;
-    urlEl.classList.remove('url-fade');
-    newEl.classList.add('active', 'entering');
-    setTimeout(() => {
-      newEl.classList.remove('entering');
-      showcaseAnimating = false;
-    }, 500);
-  }, 220);
-
-  currentShowcaseTab = key;
-}
-
-// ---------- FAQ ACCORDION ----------
-let openFaqIndex = 0;
-function toggleFaq(idx){
-  const wasOpen = openFaqIndex === idx;
-  if (openFaqIndex !== -1) {
-    document.getElementById('faq-ans-' + openFaqIndex).classList.remove('open');
-    document.getElementById('faq-chev-' + openFaqIndex).classList.remove('open');
-  }
-  openFaqIndex = wasOpen ? -1 : idx;
-  if (openFaqIndex !== -1) {
-    document.getElementById('faq-ans-' + openFaqIndex).classList.add('open');
-    document.getElementById('faq-chev-' + openFaqIndex).classList.add('open');
-  }
-}
-
-// ---------- FOOTER YEAR ----------
-document.getElementById('footerYear').innerHTML = '&copy; ' + new Date().getFullYear() + ' PiketKu. Seluruh hak cipta dilindungi.';
-
-// ---------- INIT ICONS ----------
-lucide.createIcons();
-</script>
-
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/showcase.js" defer></script>
+<script src="assets/js/faq.js" defer></script>
 </body>
 </html>
